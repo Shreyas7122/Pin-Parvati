@@ -3,15 +3,15 @@ layout: default
 ---
 <article class="post">
   <header class="post-header">
-    {% if page.day or page.location or page.altitude %}
+    {% if page.tag or page.day or page.location or page.altitude %}
     <div class="post-meta">
-      {% if page.day %}<span class="tag">Day {{ page.day }}</span>{% endif %}
+      {% if page.tag %}<span class="tag">{{ page.tag }}</span>{% elsif page.day %}<span class="tag">Day {{ page.day }}</span>{% endif %}
       {% if page.location %}<span>{{ page.location }}</span>{% endif %}
       {% if page.altitude %}<span>{{ page.altitude }}</span>{% endif %}
     </div>
     {% endif %}
     <h1>{{ page.title }}</h1>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{% if page.date_display %}{{ page.date_display }}{% else %}{{ page.date | date: "%-d %B %Y" }}{% endif %}</time>
   </header>
 
   {% if page.cover %}

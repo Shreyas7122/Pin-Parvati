@@ -12,7 +12,7 @@ title: Journal
   {% if site.posts.size == 0 %}
   <p class="empty">The trail hasn't started yet — entries will appear here as they're written.</p>
   {% endif %}
-  {% for post in site.posts %}
+  {% for post in site.posts reversed %}
   <a class="entry-card" href="{{ post.url | relative_url }}">
     {% if post.cover %}
     <div class="entry-thumb" style="background-image: url('{{ post.cover | relative_url }}');"></div>
@@ -21,11 +21,11 @@ title: Journal
     {% endif %}
     <div class="entry-body">
       <div class="post-meta">
-        {% if post.day %}<span class="tag">Day {{ post.day }}</span>{% endif %}
+        {% if post.tag %}<span class="tag">{{ post.tag }}</span>{% elsif post.day %}<span class="tag">Day {{ post.day }}</span>{% endif %}
         {% if post.location %}<span>{{ post.location }}</span>{% endif %}
       </div>
       <h2>{{ post.title }}</h2>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.date_display %}{{ post.date_display }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
       <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
     </div>
   </a>
