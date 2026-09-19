@@ -1,0 +1,33 @@
+---
+layout: default
+title: Journal
+---
+<section class="hero">
+  <p class="eyebrow">Himachal Pradesh, India</p>
+  <h1>Pin Parvati Pass</h1>
+  <p>{{ site.description }}</p>
+</section>
+
+<section class="entries">
+  {% if site.posts.size == 0 %}
+  <p class="empty">The trail hasn't started yet — entries will appear here as they're written.</p>
+  {% endif %}
+  {% for post in site.posts %}
+  <a class="entry-card" href="{{ post.url | relative_url }}">
+    {% if post.cover %}
+    <div class="entry-thumb" style="background-image: url('{{ post.cover | relative_url }}');"></div>
+    {% else %}
+    <div class="entry-thumb placeholder"></div>
+    {% endif %}
+    <div class="entry-body">
+      <div class="post-meta">
+        {% if post.day %}<span class="tag">Day {{ post.day }}</span>{% endif %}
+        {% if post.location %}<span>{{ post.location }}</span>{% endif %}
+      </div>
+      <h2>{{ post.title }}</h2>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+    </div>
+  </a>
+  {% endfor %}
+</section>

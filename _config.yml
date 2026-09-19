@@ -1,0 +1,29 @@
+title: Pin Parvati
+description: >-
+  A trail journal from the Pin Parvati Pass expedition — day-by-day notes,
+  altitude, weather, and the photos that came with it.
+baseurl: "/Pin-Parvati"
+url: "https://shreyas7122.github.io"
+author: Shreyas
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+exclude:
+  - README.md

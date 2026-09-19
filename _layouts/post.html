@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    {% if page.day or page.location or page.altitude %}
+    <div class="post-meta">
+      {% if page.day %}<span class="tag">Day {{ page.day }}</span>{% endif %}
+      {% if page.location %}<span>{{ page.location }}</span>{% endif %}
+      {% if page.altitude %}<span>{{ page.altitude }}</span>{% endif %}
+    </div>
+    {% endif %}
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+  </header>
+
+  {% if page.cover %}
+  <div class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.gallery %}
+  <div class="gallery">
+    {% for photo in page.gallery %}
+    <a href="{{ photo | relative_url }}" class="gallery-item">
+      <img src="{{ photo | relative_url }}" alt="{{ page.title }} photo {{ forloop.index }}" loading="lazy">
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <nav class="post-nav">
+    <a href="{{ '/' | relative_url }}">&larr; Back to journal</a>
+  </nav>
+</article>
