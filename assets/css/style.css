@@ -287,6 +287,9 @@ h1, h2, h3 {
 
 .post-content {
   font-size: 1.05rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .post-content p {
