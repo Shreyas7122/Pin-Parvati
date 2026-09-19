@@ -17,6 +17,7 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -125,85 +126,111 @@ h1, h2, h3 {
   margin-top: 0.6em;
 }
 
-/* Entry list */
-
-.entries {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 40px 24px 80px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
+/* Story (continuous scroll) */
 
 .empty {
-  grid-column: 1 / -1;
   color: var(--muted);
   font-style: italic;
   padding: 40px 0;
 }
 
-.entry-card {
+.story {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 24px 40px;
+}
+
+.story-section {
+  padding: 48px 0;
+  scroll-margin-top: 84px;
+}
+
+.story-section + .story-section {
+  border-top: 1px solid var(--border);
+}
+
+.story-section h2 {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  margin: 10px 0 4px;
+}
+
+.story-section > time {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+/* Right-side index nav */
+
+.index-nav {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  z-index: 20;
+}
+
+.index-dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px;
+  text-decoration: none;
+}
+
+.index-dot .dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: transform 0.18s ease, background-color 0.18s ease;
+}
+
+.index-dot.is-active .dot {
+  background: var(--ridge-1);
+  transform: scale(1.5);
+}
+
+.index-dot:hover .dot,
+.index-dot:focus-visible .dot {
+  background: var(--accent);
+  transform: scale(2.2);
+}
+
+.index-label {
+  position: absolute;
+  right: 100%;
+  margin-right: 12px;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink);
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
+  padding: 3px 10px;
+  border-radius: 100px;
   box-shadow: var(--shadow);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  opacity: 0;
+  transform: translateX(4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
-.entry-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(28, 36, 48, 0.06), 0 16px 32px rgba(28, 36, 48, 0.09);
+.index-dot:hover .index-label,
+.index-dot:focus-visible .index-label {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-.entry-thumb {
-  aspect-ratio: 16 / 10;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--ridge-2);
-}
-
-.entry-thumb.placeholder {
-  background-image: linear-gradient(135deg, var(--ridge-1), var(--ridge-2));
-  position: relative;
-}
-
-.entry-thumb.placeholder::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(115deg, transparent 40%, rgba(255,255,255,0.06) 50%, transparent 60%);
-}
-
-.entry-body {
-  padding: 18px 20px 22px;
-}
-
-.entry-body h2 {
-  font-size: 1.25rem;
-  margin: 6px 0 4px;
-}
-
-.entry-body time {
-  display: block;
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-
-.entry-body p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-/* Meta tags (shared by card + post) */
+/* Meta tags (shared by story section + post) */
 
 .post-meta {
   display: flex;
@@ -370,11 +397,13 @@ h1, h2, h3 {
 
 /* Responsive */
 
-@media (max-width: 640px) {
-  .entries {
-    grid-template-columns: 1fr;
+@media (max-width: 900px) {
+  .index-nav {
+    display: none;
   }
+}
 
+@media (max-width: 640px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }

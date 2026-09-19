@@ -3,3 +3,8 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Raw photo drops — pull what's needed into assets/images/<slug>/, leave originals out of git
+/Photos/
+
+.claude/

@@ -8,26 +8,49 @@ title: Journal
   <p>{{ site.description }}</p>
 </section>
 
-<section class="entries">
-  {% if site.posts.size == 0 %}
-  <p class="empty">The trail hasn't started yet — entries will appear here as they're written.</p>
-  {% endif %}
+{% if site.posts.size == 0 %}
+<p class="empty wrap">The trail hasn't started yet — entries will appear here as they're written.</p>
+{% else %}
+<nav class="index-nav" aria-label="Journal sections">
   {% for post in site.posts reversed %}
-  <a class="entry-card" href="{{ post.url | relative_url }}">
-    {% if post.cover %}
-    <div class="entry-thumb" style="background-image: url('{{ post.cover | relative_url }}');"></div>
-    {% else %}
-    <div class="entry-thumb placeholder"></div>
-    {% endif %}
-    <div class="entry-body">
-      <div class="post-meta">
-        {% if post.tag %}<span class="tag">{{ post.tag }}</span>{% elsif post.day %}<span class="tag">Day {{ post.day }}</span>{% endif %}
-        {% if post.location %}<span>{{ post.location }}</span>{% endif %}
-      </div>
-      <h2>{{ post.title }}</h2>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.date_display %}{{ post.date_display }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
-      <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
-    </div>
+  <a href="#{{ post.slug }}" class="index-dot">
+    <span class="dot"></span>
+    <span class="index-label">{{ post.tag | default: post.title }}</span>
   </a>
   {% endfor %}
-</section>
+</nav>
+
+<div class="story">
+  {% for post in site.posts reversed %}
+  <section id="{{ post.slug }}" class="story-section">
+    <div class="post-meta">
+      {% if post.tag %}<span class="tag">{{ post.tag }}</span>{% elsif post.day %}<span class="tag">Day {{ post.day }}</span>{% endif %}
+      {% if post.location %}<span>{{ post.location }}</span>{% endif %}
+      {% if post.altitude %}<span>{{ post.altitude }}</span>{% endif %}
+    </div>
+    <h2>{{ post.title }}</h2>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.date_display %}{{ post.date_display }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
+
+    {% if post.cover %}
+    <div class="post-cover">
+      <img src="{{ post.cover | relative_url }}" alt="{{ post.title }}" loading="lazy">
+    </div>
+    {% endif %}
+
+    <div class="post-content">
+      {{ post.content }}
+    </div>
+
+    {% if post.gallery %}
+    <div class="gallery">
+      {% for photo in post.gallery %}
+      <a href="{{ photo | relative_url }}" class="gallery-item">
+        <img src="{{ photo | relative_url }}" alt="{{ post.title }} photo {{ forloop.index }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+</div>
+{% endif %}
