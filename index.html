@@ -15,7 +15,7 @@ title: Journal
   {% for post in site.posts reversed %}
   <a href="#{{ post.slug }}" class="index-dot">
     <span class="dot"></span>
-    <span class="index-label">{{ post.tag | default: post.title }}</span>
+    <span class="index-label">{{ post.title }}</span>
   </a>
   {% endfor %}
 </nav>
