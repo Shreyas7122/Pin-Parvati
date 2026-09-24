@@ -76,6 +76,8 @@ Still, after all the questions, they gave me their permission.
 
 And suddenly, the thing that had lived in my imagination for an entire year became real.
 
-Pin Parvati was no longer something I was planning to do someday.
+**I was going to Pin Parvati.**
 
-It was this year. 2026.
+Ten days.
+
+And I had absolutely no idea what those ten days were going to ask of me.
