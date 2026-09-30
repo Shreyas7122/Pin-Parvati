@@ -303,6 +303,13 @@ h1, h2, h3 {
   font-size: 1.4rem;
 }
 
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5em auto;
+  width: 80px;
+}
+
 .post-content img {
   border-radius: 8px;
   margin: 1.5em 0;
@@ -315,6 +322,27 @@ h1, h2, h3 {
   border-left: 3px solid var(--accent);
   color: var(--muted);
   font-style: italic;
+}
+
+/* Inline detail photo (moderate-sized, captioned — for gear/detail shots
+   rather than full-width scene photos) */
+
+.detail-photo {
+  max-width: 320px;
+  margin: 2em auto;
+}
+
+.detail-photo img {
+  margin: 0;
+}
+
+.detail-photo figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  hyphens: none;
 }
 
 /* Gallery */

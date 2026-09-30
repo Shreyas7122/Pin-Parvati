@@ -79,6 +79,11 @@ I was going to use them for Pin Parvati.
 
 So I took them on my first proper test.
 
+<figure class="detail-photo">
+  <img src="{{ '/assets/images/the-preparation/shoes.jpg' | relative_url }}" alt="Sole of the trail shoe, tread and brand marks visible, in grass">
+  <figcaption>The shoes on their first test — fourteen kilometres, thirteen kilos.</figcaption>
+</figure>
+
 **14 kilometres.**
 
 With around **13 kg on my back.**
