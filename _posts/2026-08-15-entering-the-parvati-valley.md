@@ -3,7 +3,7 @@ title: "Entering the Parvati Valley"
 tag: "Origin of Pin Parvati"
 date: 2026-08-15 18:00:00 +0530
 date_display: "2026"
-excerpt: "A dog who knew the whole village, a cafe run by two people who'd made the valley home, and one more conversation about Pin Parvati before the walking began."
+excerpt: "A heat ulcer, a coconut, a dog who knew the whole village — and one more conversation about Pin Parvati before the walking finally began."
 ---
 
 From Chandigarh, I eventually reached Bhuntar.
@@ -20,7 +20,19 @@ I moved to the front seat beside the driver.
 
 It was probably the best seat in the bus.
 
-The view was incredible, and I got talking to the people around me. They offered me some of their snacks, and we had a few casual conversations as the bus slowly made its way deeper into the valley.
+The driver offered me some snacks and started talking to me. I wanted to have them, but there was one small problem.
+
+My strict dal-chawal-heavy preparation diet had given me a heat ulcer.
+
+So I had to politely refuse.
+
+Instead, they suggested I eat some coconut because apparently that would help with the ulcer.
+
+It was a small thing.
+
+But it was also becoming a pattern.
+
+Since leaving home, I had been meeting complete strangers, and somehow, they kept looking out for me.
 
 Eventually, I reached Chojh.
 
@@ -113,6 +125,20 @@ Random jokes.
 Everything in between.
 
 It was one of those conversations where you don't realise how much time has passed.
+
+And looking back, that entire day had a strange theme to it.
+
+I kept meeting strangers.
+
+And somehow, those strangers kept caring about me.
+
+A conductor stopped his bus to help someone.
+
+People on another bus offered me food and advice.
+
+A dog led me through a village.
+
+And now I was sitting with people who had made this valley their home, talking about the journey I was about to begin.
 
 Eventually, it was time for me to sleep.
 
