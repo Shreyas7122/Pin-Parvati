@@ -20,6 +20,12 @@ title: Journal
   {% endfor %}
 </nav>
 
+<nav class="index-nav-mobile" aria-label="Journal sections">
+  {% for post in site.posts reversed %}
+  <a href="#{{ post.slug }}">{{ post.title }}</a>
+  {% endfor %}
+</nav>
+
 <div class="story">
   {% for post in site.posts reversed %}
   <section id="{{ post.slug }}" class="story-section">

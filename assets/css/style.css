@@ -230,6 +230,13 @@ h1, h2, h3 {
   transform: translateX(0);
 }
 
+/* Mobile chapter strip — replaces the dot nav below 900px, since hover
+   labels and a right-edge column don't work on touch/narrow screens */
+
+.index-nav-mobile {
+  display: none;
+}
+
 /* Meta tags (shared by story section + post) */
 
 .post-meta {
@@ -433,6 +440,43 @@ h1, h2, h3 {
 @media (max-width: 900px) {
   .index-nav {
     display: none;
+  }
+
+  .index-nav-mobile {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    position: sticky;
+    top: 64px;
+    z-index: 15;
+    background: var(--paper);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 16px;
+  }
+
+  .index-nav-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .index-nav-mobile a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 6px 14px;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  }
+
+  .index-nav-mobile a.is-active {
+    color: var(--accent-ink);
+    border-color: var(--accent);
+    background: rgba(179, 85, 47, 0.08);
   }
 }
 
