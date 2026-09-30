@@ -3,6 +3,7 @@ title: "The Decision — Pune"
 tag: "Origin of Pin Parvati"
 date: 2026-05-01
 date_display: "2026"
+cover: /assets/images/the-decision-pune/cover.jpg
 excerpt: "For almost a year, Pin Parvati lived in the back of my mind. Then one day in Pune, I decided."
 ---
 
