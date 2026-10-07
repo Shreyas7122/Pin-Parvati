@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
 import PhotoPickerModal from '../components/PhotoPickerModal';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function WriteupEditorPage() {
   const {
@@ -397,7 +398,7 @@ export default function WriteupEditorPage() {
                   </div>
                   {currentSection.cover ? (
                     <div style={{ marginTop: 8, position: 'relative', borderRadius: 8, overflow: 'hidden', maxHeight: 200, border: '1px solid var(--border)' }}>
-                      <img src={currentSection.cover} alt="Cover" style={{ width: '100%', maxHeight: 200, objectFit: 'cover' }} />
+                      <img src={assetUrl(currentSection.cover)} alt="Cover" style={{ width: '100%', maxHeight: 200, objectFit: 'cover' }} />
                       <button
                         onClick={() => updateSection(currentSection.id, { cover: '' })}
                         style={{
@@ -576,7 +577,7 @@ export default function WriteupEditorPage() {
                         {block.type === 'photo' && (
                           <div className="photo-editor-body">
                             <div className="photo-preview-box">
-                              <img src={block.url} alt={block.caption || 'Photo'} />
+                              <img src={assetUrl(block.url)} alt={block.caption || 'Photo'} />
                             </div>
 
                             <div className="photo-controls-row">
@@ -690,7 +691,7 @@ export default function WriteupEditorPage() {
 
                   {currentSection.cover && (
                     <div className="post-cover">
-                      <img src={currentSection.cover} alt={currentSection.title} />
+                      <img src={assetUrl(currentSection.cover)} alt={currentSection.title} />
                     </div>
                   )}
 
@@ -719,7 +720,7 @@ export default function WriteupEditorPage() {
                         return (
                           <figure key={idx} className={`block-photo layout-${block.layout || 'detail'}`}>
                             <div className="photo-frame">
-                              <img src={block.url} alt={block.caption || 'Photo'} />
+                              <img src={assetUrl(block.url)} alt={block.caption || 'Photo'} />
                             </div>
                             {block.caption && <figcaption className="photo-caption">{block.caption}</figcaption>}
                           </figure>

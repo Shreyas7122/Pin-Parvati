@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mountain, MapPin, Compass, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function AboutPage() {
   return (
@@ -17,7 +18,7 @@ export default function AboutPage() {
       </p>
 
       <div style={{ margin: '32px 0', borderRadius: 12, overflow: 'hidden', border: '1px solid var(--border)' }}>
-        <img src="/assets/images/spiti-2025/cover.jpg" alt="Pin Parvati Mountains" style={{ width: '100%' }} />
+        <img src={assetUrl('/assets/images/spiti-2025/cover.jpg')} alt="Pin Parvati Mountains" style={{ width: '100%' }} />
       </div>
 
       <div className="post-content">

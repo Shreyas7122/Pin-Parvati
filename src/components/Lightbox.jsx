@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function Lightbox() {
   const { activeLightboxImg, setActiveLightboxImg } = useStory();
@@ -38,7 +39,7 @@ export default function Lightbox() {
 
       <div className="lightbox-img-wrapper" onClick={(e) => e.stopPropagation()}>
         <img
-          src={activeLightboxImg.url}
+          src={assetUrl(activeLightboxImg.url)}
           alt={activeLightboxImg.caption || activeLightboxImg.alt || 'Pin Parvati Photo'}
         />
         {activeLightboxImg.caption && (

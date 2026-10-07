@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Compass, Edit3, ArrowRight, Mountain, Tag, Share2 } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function JournalPage() {
   const { storyData, setActiveLightboxImg } = useStory();
@@ -147,7 +148,7 @@ export default function JournalPage() {
                     })
                   }
                 >
-                  <img src={section.cover} alt={section.title} loading="lazy" />
+                  <img src={assetUrl(section.cover)} alt={section.title} loading="lazy" />
                 </div>
               )}
 
@@ -208,7 +209,7 @@ export default function JournalPage() {
                           }
                         >
                           <img
-                            src={block.url}
+                            src={assetUrl(block.url)}
                             alt={block.alt || block.caption || 'Trail photograph'}
                             loading="lazy"
                           />
@@ -237,7 +238,7 @@ export default function JournalPage() {
                               })
                             }
                           >
-                            <img src={p.url} alt={p.caption || 'Gallery image'} loading="lazy" />
+                            <img src={assetUrl(p.url)} alt={p.caption || 'Gallery image'} loading="lazy" />
                           </div>
                         ))}
                       </div>

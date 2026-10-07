@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, Upload, Image as ImageIcon, Link as LinkIcon, Check } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
+import { assetUrl } from '../utils/assetUrl';
 
 export default function PhotoPickerModal({ isOpen, onClose, onSelectPhoto, title = 'Choose or Upload Photo' }) {
   const { storyData } = useStory();
@@ -110,7 +111,7 @@ export default function PhotoPickerModal({ isOpen, onClose, onSelectPhoto, title
                       outline: isSelected ? '3px solid var(--accent-light)' : 'none'
                     }}
                   >
-                    <img src={p.url} alt={p.name} loading="lazy" />
+                    <img src={assetUrl(p.url)} alt={p.name} loading="lazy" />
                     <div className="preset-photo-card-name">
                       {p.name}
                     </div>
@@ -160,7 +161,7 @@ export default function PhotoPickerModal({ isOpen, onClose, onSelectPhoto, title
                   Selected: {selectedPhoto.name}
                 </p>
                 <div style={{ maxWidth: 200, margin: '8px auto', borderRadius: 8, overflow: 'hidden', border: '1px solid var(--border)' }}>
-                  <img src={selectedPhoto.url} alt="Upload preview" />
+                  <img src={assetUrl(selectedPhoto.url)} alt="Upload preview" />
                 </div>
               </div>
             )}
