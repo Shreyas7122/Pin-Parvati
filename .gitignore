@@ -4,7 +4,10 @@ _site/
 .jekyll-metadata
 .DS_Store
 
-# Raw photo drops — pull what's needed into assets/images/<slug>/, leave originals out of git
-/Photos/
+# Dependencies & Build Output
+node_modules/
+dist/
 
+# Raw photo drops
+/Photos/
 .claude/
