@@ -374,6 +374,11 @@ export const initialStoryData = {
           content: "At one of our rest stops, a guy asked the person running a stall how many kilometres remained. The answer was five.\n\nBitu Bhaiji immediately challenged him.\n\n“From where is it five kilometres?”\n\nThe stall owner couldn't give him a clear answer.\n\nThe thing is, distances on mountain trails aren't always measured or marked precisely. The remaining distance can be more or less than what someone tells you. Still, watching Bitu Bhaiji question the estimate was amusing.\n\nThe route was around 14 km long, with roughly 800 metres of elevation gain. We kept moving, one step after another.\n\nAbhimanyu was also struggling with the climb because he had a cold."
         },
         {
+          id: "blk-d1-sunflowers-rock",
+          type: "text",
+          content: "Along the way, sunflowers dotted the trail, with bees buzzing around them. It was a beautiful little detail amid all the climbing.\n\nBut the trail wasn't always that easy to navigate. At one point, a massive rock obstructed the path, forcing us to bend down to get through. We had to lower ourselves beneath it to continue along the trail.\n\nIt was a reminder that the mountain didn't always give us a clear, comfortable path. Sometimes, we simply had to adjust ourselves and keep moving."
+        },
+        {
           id: "blk-d1-h2",
           type: "heading",
           level: 2,

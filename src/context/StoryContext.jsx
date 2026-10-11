@@ -21,6 +21,14 @@ export function StoryProvider({ children }) {
               parsed.sections.push(sec);
             }
           });
+          // Ensure Day 1 has the latest sunflowers & rock passage if already cached
+          const d1 = (parsed.sections || []).find((s) => s.id === 'sec-day-1-kheerganga');
+          if (d1 && !d1.blocks?.some((b) => b.id === 'blk-d1-sunflowers-rock')) {
+            const defaultD1 = initialStoryData.sections.find((s) => s.id === 'sec-day-1-kheerganga');
+            if (defaultD1) {
+              d1.blocks = defaultD1.blocks;
+            }
+          }
           return parsed;
         }
       }
