@@ -16,7 +16,8 @@ export const initialStoryData = {
     { name: "The Decision Cover", url: "/assets/images/the-decision-pune/cover.jpg", category: "Covers" },
     { name: "The Preparation Cover", url: "/assets/images/the-preparation/cover.jpg", category: "Covers" },
     { name: "Chandigarh Cover", url: "/assets/images/chandigarh/cover.jpg", category: "Covers" },
-    { name: "Spiti 2025 Cover", url: "/assets/images/spiti-2025/cover.jpg", category: "Covers" }
+    { name: "Spiti 2025 Cover", url: "/assets/images/spiti-2025/cover.jpg", category: "Covers" },
+    { name: "Parvati Valley Mountains", url: "/Photos/Parvati_Valley_Kasol.jpg", category: "The Trailhead" }
   ],
   sections: [
     {
@@ -280,13 +281,21 @@ export const initialStoryData = {
       dateDisplay: "16 August 2026",
       location: "Chojh & Kasol, Parvati Valley",
       altitude: "1,800 m",
-      cover: "/assets/images/spiti-2025/cover.jpg",
+      cover: "/Photos/Parvati_Valley_Kasol.jpg",
       excerpt: "The road became narrower and narrower. At some stretches, the bus travelled inches away from the cliff. Then I reached Chojh, met Mafia the dog, and sat with the people of the valley.",
       blocks: [
         {
           id: "blk-ent-1",
           type: "text",
           content: "The road became narrower and narrower.\n\nAt some stretches, the bus seemed to be travelling just inches away from falling straight down the mountain. I moved to the front seat beside the driver — probably the best seat in the bus.\n\nEventually, I reached Chojh. And I immediately liked it. In some ways, it felt more vibrant than Kasol. There was cool art painted on the walls, plenty of good food options, and somehow it felt much less commercialised."
+        },
+        {
+          id: "blk-ent-photo-1",
+          type: "photo",
+          url: "/Photos/Parvati_Valley_Kasol.jpg",
+          caption: "Parvati Valley — towering mountains rising above the road to Chojh and Kasol.",
+          alt: "Parvati Valley towering mountains",
+          layout: "detail"
         },
         {
           id: "blk-ent-2",

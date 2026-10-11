@@ -1,15 +1,24 @@
-/**
- * Prepend Vite's BASE_URL to any public asset path.
- * Works for both local dev (base = '/') and GitHub Pages (base = '/Pin-Parvati/').
- *
- * Usage: assetUrl('/Photos/Spiti_Bike.jpg')
- *   → '/Photos/Spiti_Bike.jpg'        (dev)
- *   → '/Pin-Parvati/Photos/Spiti_Bike.jpg'  (production)
- */
 export function assetUrl(path) {
-  // import.meta.env.BASE_URL is injected by Vite at build time.
-  // It ends with '/', so strip the leading slash from path to avoid double slashes.
-  const base = import.meta.env.BASE_URL; // e.g. '/Pin-Parvati/'
+  if (!path) return '';
+
+  // If already a full URL or data/blob URI, return as-is
+  if (
+    path.startsWith('data:') ||
+    path.startsWith('blob:') ||
+    path.startsWith('http://') ||
+    path.startsWith('https://')
+  ) {
+    return path;
+  }
+
+  const base = import.meta.env.BASE_URL || '/';
+
+  // If path already starts with the base path, do not prepend again
+  if (path.startsWith(base)) {
+    return path;
+  }
+
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   return `${base}${cleanPath}`;
 }
+

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 import { initialStoryData } from '../data/defaultStory';
 
 const StoryContext = createContext(null);
@@ -9,13 +9,22 @@ export function StoryProvider({ children }) {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === 'object') {
+          // Keep presetPhotos updated with latest presets from initialStoryData
+          parsed.presetPhotos = initialStoryData.presetPhotos;
+          return parsed;
+        }
       }
     } catch (e) {
       console.error('Error loading saved story from localStorage:', e);
     }
     return initialStoryData;
   });
+
+  const [past, setPast] = useState([]);
+  const [future, setFuture] = useState([]);
+  const lastTextEditRef = useRef({ time: 0, targetId: null });
 
   const [activeLightboxImg, setActiveLightboxImg] = useState(null);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
@@ -38,8 +47,42 @@ export function StoryProvider({ children }) {
     }, 3000);
   };
 
+  // --- Undo & Redo History System ---
+  const recordSnapshot = (snapshot) => {
+    setPast((prev) => {
+      const next = [...prev, snapshot];
+      if (next.length > 50) return next.slice(next.length - 50);
+      return next;
+    });
+    setFuture([]);
+  };
+
+  const undo = () => {
+    if (past.length === 0) return;
+    const previous = past[past.length - 1];
+    const newPast = past.slice(0, past.length - 1);
+    setFuture((prev) => [storyData, ...prev]);
+    setPast(newPast);
+    setStoryData(previous);
+    showToast('↩️ Undo');
+  };
+
+  const redo = () => {
+    if (future.length === 0) return;
+    const next = future[0];
+    const newFuture = future.slice(1);
+    setPast((prev) => [...prev, storyData]);
+    setFuture(newFuture);
+    setStoryData(next);
+    showToast('↪️ Redo');
+  };
+
+  const canUndo = past.length > 0;
+  const canRedo = future.length > 0;
+
   // --- Section Operations ---
   const addSection = (customMeta = {}) => {
+    recordSnapshot(storyData);
     const newId = 'sec-' + Date.now();
     const newSection = {
       id: newId,
@@ -71,6 +114,12 @@ export function StoryProvider({ children }) {
   };
 
   const updateSection = (sectionId, updates) => {
+    const now = Date.now();
+    if (now - lastTextEditRef.current.time > 800 || lastTextEditRef.current.targetId !== sectionId) {
+      recordSnapshot(storyData);
+      lastTextEditRef.current = { time: now, targetId: sectionId };
+    }
+
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.map((sec) =>
@@ -80,6 +129,7 @@ export function StoryProvider({ children }) {
   };
 
   const deleteSection = (sectionId) => {
+    recordSnapshot(storyData);
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.filter((sec) => sec.id !== sectionId)
@@ -88,6 +138,7 @@ export function StoryProvider({ children }) {
   };
 
   const moveSection = (index, direction) => {
+    recordSnapshot(storyData);
     setStoryData((prev) => {
       const newSecs = [...prev.sections];
       const targetIndex = index + direction;
@@ -101,6 +152,7 @@ export function StoryProvider({ children }) {
 
   // --- Block Operations (Text, Photo, Heading, Quote, Gallery) ---
   const addBlock = (sectionId, blockData, targetIndex = null) => {
+    recordSnapshot(storyData);
     const newBlockId = 'blk-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
     const newBlock = {
       id: newBlockId,
@@ -130,6 +182,12 @@ export function StoryProvider({ children }) {
   };
 
   const updateBlock = (sectionId, blockId, updates) => {
+    const now = Date.now();
+    if (now - lastTextEditRef.current.time > 800 || lastTextEditRef.current.targetId !== blockId) {
+      recordSnapshot(storyData);
+      lastTextEditRef.current = { time: now, targetId: blockId };
+    }
+
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.map((sec) => {
@@ -145,6 +203,7 @@ export function StoryProvider({ children }) {
   };
 
   const deleteBlock = (sectionId, blockId) => {
+    recordSnapshot(storyData);
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.map((sec) => {
@@ -159,6 +218,7 @@ export function StoryProvider({ children }) {
   };
 
   const moveBlock = (sectionId, blockIndex, direction) => {
+    recordSnapshot(storyData);
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.map((sec) => {
@@ -175,6 +235,7 @@ export function StoryProvider({ children }) {
   };
 
   const duplicateBlock = (sectionId, blockIndex) => {
+    recordSnapshot(storyData);
     setStoryData((prev) => ({
       ...prev,
       sections: prev.sections.map((sec) => {
@@ -195,6 +256,7 @@ export function StoryProvider({ children }) {
   // --- Reset & Export/Import ---
   const resetToDefault = () => {
     if (window.confirm('Reset all sections and edits back to the initial Pin Parvati story?')) {
+      recordSnapshot(storyData);
       setStoryData(initialStoryData);
       localStorage.removeItem(STORAGE_KEY);
       showToast('🔄 Reset to default story');
@@ -214,6 +276,7 @@ export function StoryProvider({ children }) {
     try {
       const parsed = JSON.parse(jsonString);
       if (parsed.sections && Array.isArray(parsed.sections)) {
+        recordSnapshot(storyData);
         setStoryData(parsed);
         showToast('✅ Story loaded successfully!');
         return true;
@@ -299,7 +362,11 @@ excerpt: "${sec.excerpt || ''}"
         setIsPlayingAudio,
         lastSavedTime,
         toastMessage,
-        showToast
+        showToast,
+        undo,
+        redo,
+        canUndo,
+        canRedo
       }}
     >
       {children}

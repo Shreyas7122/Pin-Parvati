@@ -23,7 +23,9 @@ import {
   Layers,
   Copy,
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  Undo2,
+  Redo2
 } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
 import PhotoPickerModal from '../components/PhotoPickerModal';
@@ -45,7 +47,11 @@ export default function WriteupEditorPage() {
     exportJSON,
     importJSON,
     exportMarkdown,
-    showToast
+    showToast,
+    undo,
+    redo,
+    canUndo,
+    canRedo
   } = useStory();
 
   const [searchParams, setSearchParams] = useSearchParams();
@@ -134,6 +140,30 @@ export default function WriteupEditorPage() {
     input.click();
   };
 
+  // Keyboard shortcuts for Undo (Cmd/Ctrl+Z) and Redo (Cmd/Ctrl+Shift+Z, Cmd/Ctrl+Y)
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      const modifier = e.metaKey || e.ctrlKey;
+      if (!modifier) return;
+
+      if (e.key === 'z' || e.key === 'Z') {
+        if (e.shiftKey) {
+          e.preventDefault();
+          redo();
+        } else {
+          e.preventDefault();
+          undo();
+        }
+      } else if (e.key === 'y' || e.key === 'Y') {
+        e.preventDefault();
+        redo();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [undo, redo]);
+
   return (
     <div>
       {/* Top Action Bar */}
@@ -150,6 +180,57 @@ export default function WriteupEditorPage() {
           </div>
 
           <div className="editor-actions">
+            {/* Undo & Redo buttons */}
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: 'var(--card-bg, #1a1a1a)', padding: '3px 4px', borderRadius: 8, border: '1px solid var(--border)' }}>
+              <button
+                className="btn-icon-sm"
+                onClick={undo}
+                disabled={!canUndo}
+                style={{
+                  opacity: canUndo ? 1 : 0.35,
+                  cursor: canUndo ? 'pointer' : 'not-allowed',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 4,
+                  padding: '4px 8px',
+                  borderRadius: 6,
+                  fontSize: '0.82rem',
+                  border: 'none',
+                  background: 'transparent',
+                  color: 'var(--text)'
+                }}
+                title="Undo (⌘Z / Ctrl+Z)"
+                aria-label="Undo"
+              >
+                <Undo2 size={15} />
+                <span>Undo</span>
+              </button>
+              <div style={{ width: 1, height: 16, background: 'var(--border)' }} />
+              <button
+                className="btn-icon-sm"
+                onClick={redo}
+                disabled={!canRedo}
+                style={{
+                  opacity: canRedo ? 1 : 0.35,
+                  cursor: canRedo ? 'pointer' : 'not-allowed',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 4,
+                  padding: '4px 8px',
+                  borderRadius: 6,
+                  fontSize: '0.82rem',
+                  border: 'none',
+                  background: 'transparent',
+                  color: 'var(--text)'
+                }}
+                title="Redo (⌘⇧Z / Ctrl+Y)"
+                aria-label="Redo"
+              >
+                <Redo2 size={15} />
+                <span>Redo</span>
+              </button>
+            </div>
+
             {/* View Mode Tabs */}
             <div className="view-tabs">
               <button
