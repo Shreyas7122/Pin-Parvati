@@ -53,12 +53,12 @@ export const initialStoryData = {
         {
           id: "blk-spiti-3",
           type: "text",
-          content: "That's when he started telling me about **Pin Parvati**.\n\nAt first, it was just a name.\n\nThen he started explaining what it involved—the distance, the altitude, the terrain, the rivers, the glaciers, the isolation, and the number of days you'd spend completely away from normal life.\n\nSomething about it stayed with me."
+          content: "That's when he started telling me about Pin Parvati.\n\nAt first, it was just a name.\n\nThen he started explaining what it involved—the distance, the altitude, the terrain, the rivers, the glaciers, the isolation, and the number of days you'd spend completely away from normal life.\n\nSomething about it stayed with me."
         },
         {
           id: "blk-spiti-4",
           type: "text",
-          content: "For the next year, Pin Parvati kept coming back into my head.\n\nI'd randomly message Bhaiji asking questions:\n\n*Which shoes should I buy?*\n*When is the best time to go?*\n*What kind of preparation do I need?*\n*What should I expect up there?*\n\nIt slowly stopped being just an idea for an adventure."
+          content: "For the next year, Pin Parvati kept coming back into my head.\n\nI'd randomly message Bhaiji asking questions:\n\nWhich shoes should I buy?\nWhen is the best time to go?\nWhat kind of preparation do I need?\nWhat should I expect up there?\n\nIt slowly stopped being just an idea for an adventure."
         },
         {
           id: "blk-spiti-5",
@@ -82,7 +82,7 @@ export const initialStoryData = {
         {
           id: "blk-dec-1",
           type: "text",
-          content: "For almost a year, Pin Parvati had been living in the back of my mind.\n\nI had asked Bhaiji about shoes. I had asked him about the best time to go. I had looked at routes, photographs and stories from people who had done it.\n\nBut there was always one thing I hadn't done.\n\nI hadn't actually decided.\n\nUntil one day in Pune, I did.\n\n**I will do Pin Parvati this year.**\n\nNot someday.\nNot when I'm more experienced.\n**This year.**"
+          content: "For almost a year, Pin Parvati had been living in the back of my mind.\n\nI had asked Bhaiji about shoes. I had asked him about the best time to go. I had looked at routes, photographs and stories from people who had done it.\n\nBut there was always one thing I hadn't done.\n\nI hadn't actually decided.\n\nUntil one day in Pune, I did.\n\nI will do Pin Parvati this year.\n\nNot someday.\nNot when I'm more experienced.\nThis year."
         },
         {
           id: "blk-dec-photo-1",
@@ -95,12 +95,12 @@ export const initialStoryData = {
         {
           id: "blk-dec-2",
           type: "text",
-          content: "I told my parents.\n\nThey know me well enough to know when something is just an impulse and when I've already made up my mind.\n\nThey know I'm disciplined. They have seen me train when I didn't feel like training. They know that when it comes to travelling and trekking, I don't usually come back thinking, *\"That's enough.\"*\n\nI come back thinking, *\"What's next?\"*\n\nAnd I think I know where that part of me came from.\n\n**My Dad.**"
+          content: "I told my parents.\n\nThey know me well enough to know when something is just an impulse and when I've already made up my mind.\n\nThey know I'm disciplined. They have seen me train when I didn't feel like training. They know that when it comes to travelling and trekking, I don't usually come back thinking, \"That's enough.\"\n\nI come back thinking, \"What's next?\"\n\nAnd I think I know where that part of me came from.\n\nMy Dad."
         },
         {
           id: "blk-dec-3",
           type: "text",
-          content: "He has always loved trekking. He has his own relationship with mountains, and somewhere along the way, that love found its way into me.\n\nMaybe that's why he never really asked the question I expected him to ask:\n\n**\"What if you get tired halfway through?\"**\n\nHe didn't seem worried about that. Because perhaps he knew that being tired was never going to be the reason I stopped."
+          content: "He has always loved trekking. He has his own relationship with mountains, and somewhere along the way, that love found its way into me.\n\nMaybe that's why he never really asked the question I expected him to ask:\n\n\"What if you get tired halfway through?\"\n\nHe didn't seem worried about that. Because perhaps he knew that being tired was never going to be the reason I stopped."
         },
         {
           id: "blk-dec-4",
@@ -116,7 +116,7 @@ export const initialStoryData = {
         {
           id: "blk-dec-6",
           type: "text",
-          content: "Her concerns were completely different, and completely fair.\n\nBecause loving mountains from a distance is easy.\nWanting to trek is easy.\n\nBut actually waking up every morning for ten days, putting a heavy backpack on your shoulders and walking again—that is something else.\n\nStill, after all the questions, they gave me their permission.\n\nAnd suddenly, the thing that had lived in my imagination for an entire year became real.\n\n**I was going to Pin Parvati.**\n\nTen days. And I had absolutely no idea what those ten days were going to ask of me."
+          content: "Her concerns were completely different, and completely fair.\n\nBecause loving mountains from a distance is easy.\nWanting to trek is easy.\n\nBut actually waking up every morning for ten days, putting a heavy backpack on your shoulders and walking again—that is something else.\n\nStill, after all the questions, they gave me their permission.\n\nAnd suddenly, the thing that had lived in my imagination for an entire year became real.\n\nI was going to Pin Parvati.\n\nTen days. And I had absolutely no idea what those ten days were going to ask of me."
         }
       ]
     },
@@ -135,7 +135,7 @@ export const initialStoryData = {
         {
           id: "blk-prep-1",
           type: "text",
-          content: "While preparing, I realized something slightly ridiculous.\n\n**I had never done a Himalayan trek before.**\n\nI'd done treks in Maharashtra. I'd ridden through Spiti. I'd travelled quite a bit.\n\nBut Pin Parvati was different.\n\nTen days. High altitude. Carrying my own load. Glaciers. Rivers. Camps.\n\nThe mental preparation, strangely enough, wasn't the difficult part. I had been thinking about this trek for almost a year. By the time it was actually happening, I had already convinced myself that I was going to do it."
+          content: "While preparing, I realized something slightly ridiculous.\n\nI had never done a Himalayan trek before.\n\nI'd done treks in Maharashtra. I'd ridden through Spiti. I'd travelled quite a bit.\n\nBut Pin Parvati was different.\n\nTen days. High altitude. Carrying my own load. Glaciers. Rivers. Camps.\n\nThe mental preparation, strangely enough, wasn't the difficult part. I had been thinking about this trek for almost a year. By the time it was actually happening, I had already convinced myself that I was going to do it."
         },
         {
           id: "blk-prep-photo-1",
@@ -148,7 +148,7 @@ export const initialStoryData = {
         {
           id: "blk-prep-2",
           type: "text",
-          content: "The biggest thing I had gathered from making that decision was **belief**.\n\nI started asking my friends about the treks they had done. Some of them had been to 4,000-metre peaks and told me how difficult and tiring they were.\n\nAnd I remember thinking:\n\n*I'm going to do a 5,000-metre pass.*\n\nMaybe that was overconfidence. Maybe it was just belief. The strange thing about belief is that once you have it, your brain starts looking for evidence to support it.\n\nThe problem was, at that point, I didn't have much evidence.\n\nSo instead of trying to convince myself that I was capable of it, I started preparing like I was."
+          content: "The biggest thing I had gathered from making that decision was belief.\n\nI started asking my friends about the treks they had done. Some of them had been to 4,000-metre peaks and told me how difficult and tiring they were.\n\nAnd I remember thinking:\n\nI'm going to do a 5,000-metre pass.\n\nMaybe that was overconfidence. Maybe it was just belief. The strange thing about belief is that once you have it, your brain starts looking for evidence to support it.\n\nThe problem was, at that point, I didn't have much evidence.\n\nSo instead of trying to convince myself that I was capable of it, I started preparing like I was."
         },
         {
           id: "blk-prep-3",
@@ -172,7 +172,7 @@ export const initialStoryData = {
         {
           id: "blk-prep-6",
           type: "text",
-          content: "**14 kilometres.**\n\nWith around **13 kg on my back.**\n\nIt was the first time I could look at what I had been preparing for and think:\n\n*Okay. Maybe I really can do this.*"
+          content: "14 kilometres.\n\nWith around 13 kg on my back.\n\nIt was the first time I could look at what I had been preparing for and think:\n\nOkay. Maybe I really can do this."
         }
       ]
     },
@@ -197,12 +197,12 @@ export const initialStoryData = {
         {
           id: "blk-chd-2",
           type: "text",
-          content: "The days before leaving were busy. There wasn't really any time to sit down and think about what I was about to do. I just kept doing whatever was left.\n\nPack this. Check that. Remove something. Add something else.\n\nI had been told to keep my backpack around **7.5 kg**, but somehow, by the time I was done packing, it was closer to **10 kg**.\n\nMy flight was at 3 AM.\nI planned to sleep at 10 PM and wake up around midnight. Then I remembered something: my phone storage was full.\n\nI spent the night deleting photos and videos, clearing storage and trying to make enough space for the expedition."
+          content: "The days before leaving were busy. There wasn't really any time to sit down and think about what I was about to do. I just kept doing whatever was left.\n\nPack this. Check that. Remove something. Add something else.\n\nI had been told to keep my backpack around 7.5 kg, but somehow, by the time I was done packing, it was closer to 10 kg.\n\nMy flight was at 3 AM.\nI planned to sleep at 10 PM and wake up around midnight. Then I remembered something: my phone storage was full.\n\nI spent the night deleting photos and videos, clearing storage and trying to make enough space for the expedition."
         },
         {
           id: "blk-chd-3",
           type: "text",
-          content: "At the airport, I started reading *Paths of Glory*. The book begins with the discovery of a dead climber on Everest.\n\nI was reading about Everest while sitting in an airport, about to fly towards my own Himalayan expedition.\n\nSomewhere between the pages, the reality started catching up.\n\nThere was fear. Excitement. Fantasizing about what the next few days might look like. And then there was something stranger — trying to imagine a future that I couldn't actually picture."
+          content: "At the airport, I started reading Paths of Glory. The book begins with the discovery of a dead climber on Everest.\n\nI was reading about Everest while sitting in an airport, about to fly towards my own Himalayan expedition.\n\nSomewhere between the pages, the reality started catching up.\n\nThere was fear. Excitement. Fantasizing about what the next few days might look like. And then there was something stranger — trying to imagine a future that I couldn't actually picture."
         },
         {
           id: "blk-chd-4",
@@ -213,7 +213,7 @@ export const initialStoryData = {
         {
           id: "blk-chd-5",
           type: "text",
-          content: "I reached Chandigarh around 6 AM. I was supposed to meet my shared cab at 9, so I had a few hours to kill.\n\nI got into a bus, and told the conductor: **\"Bhaiji, last stop pe chhod dena.\"**\n\nThen something happened that I still remember. A man suddenly called out to the conductor: *\"Bhaiji, bhaiji, bachao.\"* His head was spinning. The conductor called for an ambulance, but hearing it would take time, the bus deviated by **2 kilometres** straight to the hospital.\n\nThe conductor got a wheelchair and escorted him inside to the doctor.\n\nI was struck by the humanity he showed. No drama. Just help."
+          content: "I reached Chandigarh around 6 AM. I was supposed to meet my shared cab at 9, so I had a few hours to kill.\n\nI got into a bus, and told the conductor: \"Bhaiji, last stop pe chhod dena.\"\n\nThen something happened that I still remember. A man suddenly called out to the conductor: \"Bhaiji, bhaiji, bachao.\" His head was spinning. The conductor called for an ambulance, but hearing it would take time, the bus deviated by 2 kilometres straight to the hospital.\n\nThe conductor got a wheelchair and escorted him inside to the doctor.\n\nI was struck by the humanity he showed. No drama. Just help."
         },
         {
           id: "blk-chd-6",
@@ -249,7 +249,7 @@ export const initialStoryData = {
         {
           id: "blk-cab-2",
           type: "text",
-          content: "Eventually, it was time to leave Chandigarh. I got into the shared cab.\n\nThere was an uncle and aunty who lived in Kullu, a girl who worked as a social media manager, and another girl who worked in the IT industry in Chandigarh.\n\nThe driver started with the usual questions: *\"Aap log kya karte ho? Kahan se ho?\"*\n\nAnd somehow, that simple conversation turned into hours of talking."
+          content: "Eventually, it was time to leave Chandigarh. I got into the shared cab.\n\nThere was an uncle and aunty who lived in Kullu, a girl who worked as a social media manager, and another girl who worked in the IT industry in Chandigarh.\n\nThe driver started with the usual questions: \"Aap log kya karte ho? Kahan se ho?\"\n\nAnd somehow, that simple conversation turned into hours of talking."
         },
         {
           id: "blk-cab-photo-1",
@@ -291,7 +291,7 @@ export const initialStoryData = {
         {
           id: "blk-ent-2",
           type: "text",
-          content: "From the village, I had about a **15-minute hike** to the cafe where Bindu and Jessi lived. They were the owners.\n\nI reached there, had some amazing food and met Mafia, their dog. Mafia seemed to know the village better than I did. He even introduced me to half the village kids!"
+          content: "From the village, I had about a 15-minute hike to the cafe where Bindu and Jessi lived. They were the owners.\n\nI reached there, had some amazing food and met Mafia, their dog. Mafia seemed to know the village better than I did. He even introduced me to half the village kids!"
         },
         {
           id: "blk-ent-3",
@@ -302,7 +302,7 @@ export const initialStoryData = {
         {
           id: "blk-ent-4",
           type: "text",
-          content: "I took a bath, relaxed for a while and eventually came down to the cafe, where Bindu and Jessi were sitting. There were locals and other people around, and naturally, the conversation turned towards Pin Parvati.\n\nThis was when the scale of what I was about to do started sinking in again.\n\nThere was the distance. There was the altitude. Bindu was nervous too. She had come to Parvati Valley six years earlier and made it her home. Now she was going to travel towards Spiti to connect with **Parvati Mata**."
+          content: "I took a bath, relaxed for a while and eventually came down to the cafe, where Bindu and Jessi were sitting. There were locals and other people around, and naturally, the conversation turned towards Pin Parvati.\n\nThis was when the scale of what I was about to do started sinking in again.\n\nThere was the distance. There was the altitude. Bindu was nervous too. She had come to Parvati Valley six years earlier and made it her home. Now she was going to travel towards Spiti to connect with Parvati Mata."
         },
         {
           id: "blk-ent-5",
