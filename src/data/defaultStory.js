@@ -325,6 +325,105 @@ export const initialStoryData = {
           content: "Eventually, it was time for me to sleep.\n\nI had travelled a long way to get here.\n\nTomorrow, I would finally start walking."
         }
       ]
+    },
+    {
+      id: "sec-day-1-kheerganga",
+      slug: "day-1-kheerganga",
+      title: "Day 1 — The Climb to Kheerganga",
+      tag: "Day 1 · Expedition",
+      day: "Day 1",
+      date: "2026-09-04",
+      dateDisplay: "Friday, 4 September 2026",
+      location: "Barshaini Dam to Kheerganga",
+      altitude: "2,200 m → 2,960 m",
+      cover: "/Photos/PXL_20260903_061910335_exported_22675.jpg",
+      excerpt: "Lifting 140 kg in the gym felt easier than carrying a 20 kg backpack up a steep incline. Out of reach, under waterfalls, and ending beneath the Milky Way.",
+      blocks: [
+        {
+          id: "blk-d1-trail-info",
+          type: "text",
+          content: "Trail Stats:\n• Start: Barshaini Dam (approx. 2,200 m / 7,220 ft)\n• Finish: Kheerganga campsite (approx. 2,960 m / 9,711 ft)\n• Distance: ~14 km\n• Elevation gain: ~800 m"
+        },
+        {
+          id: "blk-d1-1",
+          type: "text",
+          content: "I woke up to watch the sunrise, knowing that this was the morning when the actual trek would begin. I had a call with the other two members of our trekking group, Yogesh and Abhimanyu, before they joined us at Formosa.\n\nWe had an awesome breakfast together. Then it was time to say goodbye to Jessi, who wouldn't be joining us for the trek.\n\nFrom there, we headed towards the Barshaini Dam, where Isham Bhaiji—the guide from my Spiti bike trip—and the rest of the trekking guides were waiting for us.\n\nWe were introduced to all the guides, and then we started walking.\n\nThere wasn't much small talk. We had plenty of time ahead of us, and we expected to have ten days together. For now, it was time to move.\n\nWe collected our crampons, and I made one last call home. I told my family that I probably wouldn't have network access for the next nine days.\n\nAnd just like that, I was out of reach."
+        },
+        {
+          id: "blk-d1-h1",
+          type: "heading",
+          level: 2,
+          text: "Testing Myself"
+        },
+        {
+          id: "blk-d1-2",
+          type: "text",
+          content: "The trail began, and we settled into a steady pace.\n\nAfter an hour or two, walking at the same pace started to feel boring. I wanted to do something different, so I picked up Bitu Bhaiji's backpack.\n\nIt weighed around 20 kg.\n\nI thought I could handle it. After all, I had been training in the gym, lifting weights and preparing myself for this expedition.\n\nBut after barely a kilometre, I had to give up.\n\nI was out of breath.\n\nLifting 140 kg for eight reps in a deadlift felt easier than carrying a 20 kg backpack up a steep incline. In the gym, you lift the weight, put it down, and take a rest. On a mountain, the weight stays with you, and the climb doesn't stop just because you're tired.\n\nThat was my first real lesson of the trek: being strong in the gym and being strong on a mountain are two very different things.\n\nSo I returned the backpack to Bitu Bhaiji and continued at our normal pace."
+        },
+        {
+          id: "blk-d1-photo-1",
+          type: "photo",
+          url: "/Photos/PXL_20260903_061910335_exported_22675.jpg",
+          caption: "Morning on the trail to Kheerganga — learning the weight of the mountain.",
+          alt: "The trail to Kheerganga",
+          layout: "detail"
+        },
+        {
+          id: "blk-d1-3",
+          type: "text",
+          content: "At one of our rest stops, a guy asked the person running a stall how many kilometres remained. The answer was five.\n\nBitu Bhaiji immediately challenged him.\n\n“From where is it five kilometres?”\n\nThe stall owner couldn't give him a clear answer.\n\nThe thing is, distances on mountain trails aren't always measured or marked precisely. The remaining distance can be more or less than what someone tells you. Still, watching Bitu Bhaiji question the estimate was amusing.\n\nThe route was around 14 km long, with roughly 800 metres of elevation gain. We kept moving, one step after another.\n\nAbhimanyu was also struggling with the climb because he had a cold."
+        },
+        {
+          id: "blk-d1-h2",
+          type: "heading",
+          level: 2,
+          text: "Waterfalls, Streams and a Full Stomach"
+        },
+        {
+          id: "blk-d1-4",
+          type: "text",
+          content: "We reached our lunch spot near a waterfall. I had Maggi and parathas before getting back on the trail.\n\nA little later, we came across a massive waterfall. By then, there were perhaps three kilometres left to Kheerganga.\n\nWe crossed bridges built over flowing streams, and from the very first day, we started filling our bottles directly from the streams along the route.\n\nThere was something satisfying about it. The water was right there, flowing down from the mountains, and we could refill our bottles as we walked.\n\nBut I also discovered something that my training hadn't prepared me for: trekking soon after eating was difficult for me. With food sitting in my stomach, I felt dull, tired and sluggish. The climb seemed harder, and I would tire sooner than expected.\n\nIt was a small thing, but I began noticing how much the mountain demanded from the body—not just strength, but timing, patience and learning what worked for you."
+        },
+        {
+          id: "blk-d1-h3",
+          type: "heading",
+          level: 2,
+          text: "The Hot Springs of Kheerganga"
+        },
+        {
+          id: "blk-d1-5",
+          type: "text",
+          content: "When we reached Kheerganga, we took a holy bath in its hot springs.\n\nAfter hours of walking, the warmth felt incredible. The fatigue, the heaviness in my legs and the stress of the climb seemed to melt away in the water. We came out feeling refreshed and almost unbelievably good.\n\nAfter the bath, we had some parathas. I was still hungry, but the others wanted us to head towards our camp before it got dark.\n\nI wasn't ready to leave without eating more.\n\nI convinced them to wait a little longer and ordered shakshuka. It was amazing.\n\nAnd then came the cherry on top.\n\nThe sky began turning red and pink as the sun set behind the mountains. It was one of those moments when you stop thinking about how tired you are and simply look at what's in front of you.\n\nI was glad I had stayed for that extra meal."
+        },
+        {
+          id: "blk-d1-h4",
+          type: "heading",
+          level: 2,
+          text: "A Camp Away from the Crowd"
+        },
+        {
+          id: "blk-d1-6",
+          type: "text",
+          content: "After sunset, we headed towards our camp. It was a little away from the crowded parts of Kheerganga, and by the time we got there, it was pitch black.\n\nOur tent was already set up. The team had gathered wood, and preparations for dinner were underway.\n\nI had to appreciate the effort it must have taken to gather enough wood in such a wet, mountainous region during the monsoon. Getting a fire going in those conditions wasn't something I wanted to take for granted.\n\nSoon, a campfire was burning near our tents.\n\nWe sat around it as the people there and our guides began telling us the story of Kheerganga.\n\nAccording to the legend they shared, Kheerganga was a place where Kartikeya, the son of Lord Shiva and Goddess Parvati, meditated for many years.\n\nThe story goes that Shiva and Parvati once asked their sons, Ganesha and Kartikeya, to circle the universe. Kartikeya set off on his peacock to travel around it, while Ganesha simply circled his parents, recognising them as the universe itself.\n\nGanesha was given the highest priority among the gods, and Kartikeya, feeling humiliated by the outcome, came to Kheerganga to meditate.\n\nTo comfort her son and help him move on from the disappointment, Mata Parvati made kheer for him. The kheer spilled into the valley, and the place began flowing with it.\n\nLater, according to the story, Parshuram brought an end to the flow of kheer because its abundance could lead to conflict during Kaliyug.\n\nThe kheer disappeared, leaving water behind.\n\nWhether you know the story already or are hearing it for the first time, listening to it beside a fire, surrounded by mountains in the dark, gives it a different feeling.\n\nThe place becomes more than a destination on a trekking route. It becomes a place with stories that people have carried for generations."
+        },
+        {
+          id: "blk-d1-h5",
+          type: "heading",
+          level: 2,
+          text: "Dinner Beneath the Stars"
+        },
+        {
+          id: "blk-d1-7",
+          type: "text",
+          content: "Dinner was served around the campfire.\n\nThere were no chairs. We sat on pieces of wood that would otherwise have been used to keep the fire burning. Surprisingly, they were comfortable enough.\n\nThe food was simple, warm and comforting. After a day of walking, that was all I needed.\n\nOnce I finished eating, I started walking back towards the tent.\n\nAnd then I looked up.\n\nAt first, I thought I was looking at a dusty cloud hanging across the sky.\n\nWell, well, well.\n\nIt wasn't a dusty cloud.\n\nIt was the Milky Way, visible to the naked eye.\n\nI stood there looking at it, taking in the fact that this was how my first day of the Pin Parvati expedition was ending. I had spent the day struggling with a backpack, climbing towards Kheerganga, soaking in hot springs, eating good food and listening to stories around a campfire.\n\nAnd now, above me, was the galaxy itself.\n\nI had been scared before the trek began. I was excited, too. I was there with my fellow trekkers and seven guides, about to spend days walking through a landscape I had never experienced before.\n\nThe first day hadn't been easy, but it had given me a taste of what was waiting ahead.\n\nFor now, that was enough.\n\nI went to sleep feeling that Day 1 had been a success."
+        },
+        {
+          id: "blk-d1-quote",
+          type: "quote",
+          text: "Lifting 140 kg in the gym felt easier than carrying a 20 kg backpack up a steep incline. Being strong in the gym and being strong on a mountain are two very different things.",
+          author: "Day 1 Lesson"
+        }
+      ]
     }
   ]
 };

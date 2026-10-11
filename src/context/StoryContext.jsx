@@ -13,6 +13,14 @@ export function StoryProvider({ children }) {
         if (parsed && typeof parsed === 'object') {
           // Keep presetPhotos updated with latest presets from initialStoryData
           parsed.presetPhotos = initialStoryData.presetPhotos;
+          // Ensure any new default sections (e.g. Day 1) are merged into cached sections
+          const existingIds = new Set((parsed.sections || []).map((s) => s.id));
+          (initialStoryData.sections || []).forEach((sec) => {
+            if (!existingIds.has(sec.id)) {
+              parsed.sections = parsed.sections || [];
+              parsed.sections.push(sec);
+            }
+          });
           return parsed;
         }
       }
