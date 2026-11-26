@@ -1,6 +1,6 @@
 export const initialStoryData = {
   // Bump whenever the published story changes, so browsers drop their cached copy
-  contentVersion: "2026-11-26",
+  contentVersion: "2026-11-26.2",
   siteTitle: "Pin Parvati Pass",
   siteSubtitle: "Himachal Pradesh, India",
   siteDescription: "A trail journal from the Pin Parvati Pass expedition — day-by-day notes, altitude, weather, and the photos that came with it.",
@@ -389,6 +389,61 @@ export const initialStoryData = {
           id: "blk-d1v2-8",
           type: "text",
           content: "After listening to the story, we had our dinner. When I went to my tent after washing the dishes and my hands, I looked up and saw a giant cloud, and thought — the cloud also had different colours, and was too big?\n\nWell, it wasn't a cloud; it was the… Milky… Way…\n\nAnd thus, our Day 2 came to an honourable end: seeing the Milky Way with naked eyes, some pain in the leg, and beautiful learnings."
+        }
+      ]
+    },
+    {
+      id: "sec-day-3-odi-thach",
+      slug: "day-3-odi-thach",
+      title: "Day 3 — Into the Meadows of Odi Thach",
+      tag: "Day 3 · Expedition",
+      day: "Day 3",
+      date: "2026-09-05",
+      dateDisplay: "Saturday, 5 September 2026",
+      location: "Kheerganga to Odi Thach",
+      altitude: "3,360 m / 11,024 ft",
+      cover: "",
+      excerpt: "That small rose symbolised that small steps can be beautiful; there is no need to look for large steps.",
+      blocks: [
+        {
+          id: "blk-d3-1",
+          type: "text",
+          content: "The sunflowers looking for sunlight, the busy bees looking for the prettiest flowers. We 4 went for coffee at a shop, realising there was no rush for the day — no Teams, no emails. Looking at the busy bees started to feel peaceful.\n\nWe also had paratha and coffee to kick us off for today's journey towards Odi Thach. When we came back, our tent was folded and there was more paratha and chapati prepared by the Bhaijis. We had that, took our bags on our backs and headed towards the route, while some Bhaijis waited to wind up the tent."
+        },
+        {
+          id: "blk-d3-2",
+          type: "text",
+          content: "Odi Thach is where we enter the meadows, leaving the tall trees behind. The place we were travelling through had very little sunlight due to the tall trees and the valley.\n\nWe moved forward, and there were very few people coming back. They were the people returning from Mantalai Lake, as this was the best time to take a dip in Mantalai according to the tradition of the villagers around. Otherwise, there were no tourists.\n\nCrossing some small streams and wooden bridges over larger streams, we came to a halt for a short nap and to let the people behind catch up with us. The nap was really good; the best part? Waking up and realising you are in a humongous valley called Parvati, facing peaks rising to 4,000 m."
+        },
+        {
+          id: "blk-d3-3",
+          type: "text",
+          content: "The grass was green and the views amazing; we took another break after 1 hr. Watching the mountains, now with very few pine trees, birds and bees, and the water streams.\nThen, coming towards a wooden bridge with some cows and buffaloes having the green grass. This was a view I couldn't have imagined in my dreams.\n\nGuess what? I took the Sherpa's bag again, having some energy, carrying it for some time and then giving up.\n\nAnother best part of the trek? There was no one photogenic; everyone was clicking a few pictures, not to capture, but just for memory. Everyone knew their good phones and cameras wouldn't be capturing this beauty."
+        },
+        {
+          id: "blk-d3-4",
+          type: "text",
+          content: "Then we saw the Tunda Bhuj waterfall. A waterfall flowing in the middle of rock, with a huge flow, flowing straight into the valley and joining the Parvati River.\n\nWe left the huge pine trees, and now we could only see them far from our trail, and thus we took our lunch break. I was so hungry I wanted to eat a lot, but from yesterday's experience I knew I should control it so as not to feel sluggish.\n\nOur lunch spot was at a shepherd's hut: bread, peanut butter and fresh milk. Then we saw the shilajit on the opposite side of the mountain, dripping down black liquid from the grey rocks. The way to get there was too risky — no wonder shilajit is so pricey.\n\nWatching the mountains, the shilajit waterfall and the calves licking each other, we finished our lunch, having a great conversation with the Bhaijis and laughing till our milk fell."
+        },
+        {
+          id: "blk-d3-5",
+          type: "text",
+          content: "The clouds were starting to gather, and the shepherd also started making ‘khawa’ with his wife. What a life that man is living: slow-paced, no emails, no network. Just his work, his wife and a life with a small hut, enough for their needs and to store the necessities.\nThat man covered the basic needs: food, clothing, shelter."
+        },
+        {
+          id: "blk-d3-6",
+          type: "text",
+          content: "As we went forward, we saw the waterfall closer; it was welcoming us with a rainbow.\n\nAfter a while, I saw Bitu and Puri Bhaiji relaxing. They insisted on waiting, saying to me, “Aaj hi Mantalai pohochna hai kya? Ruk jao, kya jaldi hai.” They were telling us to enjoy the journey and not the destination. I really liked their mentality, so I waited with them.\n\nBindu picked up a small rose from the trail; that small rose symbolised that small steps can be beautiful; there is no need to look for large steps. Enjoying the view with small yellow flower beds, the five mountains and the waterfall with a rainbow.\n\nSo these 5 mountains emerged when the 5 Pandavas were heading for Swarg, and they encountered a rakshas. They took shelter in these 5 mountains."
+        },
+        {
+          id: "blk-d3-7",
+          type: "text",
+          content: "We enjoyed the view for an hour and reached the base camp. The base camp was properly planned, with less wind and near the shepherds, so that we could get protection from the shepherds if any wild animal came.\n\nThere was a bear-like dog waiting for our biscuits. Later I learned these are shepherd dogs, trained to tackle wild animals such as bears and snow leopards.\n\nThere were rocks all around that place. Guess what I did? I climbed them all. Then we were served their tea with some biscuits, made with some good jadi booti from around the place and the water from the nearby stream."
+        },
+        {
+          id: "blk-d3-8",
+          type: "text",
+          content: "I used to talk with them all, because mostly Bindu spoke only in English, Abhimanyu and Yogesh in Marathi, sometimes Hindi and English, and the Bhaijis in Hindi. We had such great conversations. Then I went on a rock far aside and wrote the notes of the day, while watching the shade getting darker and the clouds coming down towards us. It started getting cold, so I went to the tent.\n\nThe space near the tent was filled with sheep, and the rock beside the tent had sheep all over it. The funny thing? Those sheep sent a package down every now and then, and that package was bombarding the tent.\n\nThen we had dinner at a bonfire, which the Bhaijis created by chopping wood. Again, hats off to these people for providing us with fire and food.\n\nThen we slept, having no hope of seeing the Milky Way due to the clouds. In the middle of the night, I woke up to a growling sound; it was not my stomach, and definitely not the Milky Way. It was a bear that came to eat the sheep, and the dogs were continuously barking at them.\nMy legs were paining, so I slept."
         }
       ]
     }
