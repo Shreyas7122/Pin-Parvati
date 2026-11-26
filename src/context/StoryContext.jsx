@@ -11,6 +11,12 @@ export function StoryProvider({ children }) {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (parsed && typeof parsed === 'object') {
+          // The published story changed since this browser cached it: start from the new
+          // version, keeping the old copy under a backup key so Writeup Studio edits survive
+          if (parsed.contentVersion !== initialStoryData.contentVersion) {
+            localStorage.setItem(STORAGE_KEY + '_backup', saved);
+            return initialStoryData;
+          }
           // Keep presetPhotos updated with latest presets from initialStoryData
           parsed.presetPhotos = initialStoryData.presetPhotos;
           // Ensure any new default sections (e.g. Day 1) are merged into cached sections
@@ -21,14 +27,6 @@ export function StoryProvider({ children }) {
               parsed.sections.push(sec);
             }
           });
-          // Ensure Day 1 has the latest sunflowers & rock passage if already cached
-          const d1 = (parsed.sections || []).find((s) => s.id === 'sec-day-1-kheerganga');
-          if (d1 && !d1.blocks?.some((b) => b.id === 'blk-d1-sunflowers-rock')) {
-            const defaultD1 = initialStoryData.sections.find((s) => s.id === 'sec-day-1-kheerganga');
-            if (defaultD1) {
-              d1.blocks = defaultD1.blocks;
-            }
-          }
           return parsed;
         }
       }
@@ -293,7 +291,8 @@ export function StoryProvider({ children }) {
       const parsed = JSON.parse(jsonString);
       if (parsed.sections && Array.isArray(parsed.sections)) {
         recordSnapshot(storyData);
-        setStoryData(parsed);
+        // Stamp with the current version so the import isn't discarded on next load
+        setStoryData({ ...parsed, contentVersion: initialStoryData.contentVersion });
         showToast('✅ Story loaded successfully!');
         return true;
       } else {
