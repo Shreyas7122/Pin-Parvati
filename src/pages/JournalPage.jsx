@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Compass, Edit3, ArrowRight, Mountain, Tag, Share2 } from 'lucide-react';
 import { useStory } from '../context/StoryContext';
@@ -7,6 +7,19 @@ import { assetUrl } from '../utils/assetUrl';
 export default function JournalPage() {
   const { storyData, setActiveLightboxImg } = useStory();
   const [activeSectionId, setActiveSectionId] = useState('');
+  const mobileNavRef = useRef(null);
+
+  // With 6+ chapters the mobile pill strip overflows the screen, so slide the
+  // active pill to the middle of the strip (horizontal scroll only)
+  useEffect(() => {
+    const nav = mobileNavRef.current;
+    const pill = nav?.querySelector('a.is-active');
+    if (!nav || !pill) return;
+    const navRect = nav.getBoundingClientRect();
+    const pillRect = pill.getBoundingClientRect();
+    const offset = pillRect.left + pillRect.width / 2 - (navRect.left + navRect.width / 2);
+    nav.scrollBy({ left: offset, behavior: 'smooth' });
+  }, [activeSectionId]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +36,7 @@ export default function JournalPage() {
       });
     };
 
+    handleScroll(); // highlight the right chapter after a mid-page reload too
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [storyData]);
@@ -85,7 +99,7 @@ export default function JournalPage() {
 
       {/* Mobile Horizontal Chapter Navigation */}
       {sections.length > 0 && (
-        <nav className="index-nav-mobile" aria-label="Mobile sections navigation">
+        <nav className="index-nav-mobile" aria-label="Mobile sections navigation" ref={mobileNavRef}>
           {sections.map((sec) => (
             <a
               key={sec.id}

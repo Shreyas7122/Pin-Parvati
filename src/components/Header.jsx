@@ -42,11 +42,13 @@ export default function Header() {
           </div>
         </Link>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+        <div className="header-actions">
           <div className="nav-links">
             <Link
               to="/"
               className={`nav-link ${isJournal ? 'active' : ''}`}
+              aria-label="Journal"
+              title="Journal"
             >
               <BookOpen size={16} />
               <span>Journal</span>
@@ -55,6 +57,8 @@ export default function Header() {
             <Link
               to="/about"
               className={`nav-link ${isAbout ? 'active' : ''}`}
+              aria-label="About"
+              title="About"
             >
               <Info size={16} />
               <span>About</span>
